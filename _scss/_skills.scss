@@ -1,0 +1,42 @@
+.skills {
+
+    @include breakpoint ($mobile) {
+        padding: 50px 20px;
+    }
+    @include breakpoint ($tablet, $desktop) {
+        height: 100vh;
+        padding: 0px 50px;
+    }
+    align-items: center;
+    background: $color-primary;
+    display: flex;
+
+    .skills-col {
+        @include breakpoint ($mobile, $tablet) {
+            @include span-columns(12);
+        }
+        @include breakpoint ($desktop) {
+            @include span-columns(6);
+        }
+
+    }
+    .skills-col:last-child {
+        @include breakpoint ($mobile, $tablet) {
+            display: none;
+        }
+        text-align: center;
+    }
+    .cv-button {
+        background: $color-secondary;
+        color: $color-primary;
+        cursor: pointer;
+        font-size: 2.5em;
+        font-weight: $font-weight-bold;
+        padding: 25px;
+        text-transform: uppercase;
+    }
+    .cv-button:hover {
+        color: $color-highlight;
+    }
+
+}

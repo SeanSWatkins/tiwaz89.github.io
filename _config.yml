@@ -1,0 +1,8 @@
+name: Dean Gibson | Web Developer
+markdown: redcarpet
+highlighter: pygments # or rouge or null
+exclude: ["node_modules", "gulpfile.js", "package.json", "_js", "assets"]
+github: https://github.com/Tiwaz89
+facebook: https://www.facebook.com/deangibson89
+linkedin: https://za.linkedin.com/in/dean-gibson-a95b8498
+cv_link: /downloads/Dean_Gibson_CV.pdf

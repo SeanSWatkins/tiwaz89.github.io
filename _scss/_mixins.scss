@@ -1,0 +1,7 @@
+@mixin breakpoint($breakpoints...) {
+    @each $breakpoint in $breakpoints {
+        @include media($breakpoint) {
+            @content
+        }
+    }
+}

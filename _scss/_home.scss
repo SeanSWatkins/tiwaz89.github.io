@@ -1,0 +1,47 @@
+.home {
+
+    @include breakpoint ($mobile) {
+        padding: 0px 20px;
+    }
+    @include breakpoint ($tablet, $desktop) {
+        padding: 0px 50px;
+    }
+    align-items: center;
+    display: flex;
+    height: 100vh;
+
+    .home__title, .home__likes {
+        @include breakpoint ($mobile) {
+            font-size: 2.2em;
+            line-height: 1.5em;
+        }
+        @include breakpoint ($tablet) {
+            font-size: 4em;
+            line-height: 1.2em;
+        }
+        color: $color-secondary;
+    }
+
+    .home__title {
+        @include breakpoint ($mobile) {
+            @include span-columns(12);
+        }
+        @include breakpoint ($tablet) {
+            @include span-columns(8);
+        }
+        @include breakpoint ($desktop) {
+            @include span-columns(6);
+        }
+    }
+
+    .home__likes {
+        @include span-columns(12);
+        @include breakpoint ($mobile) {
+            margin-top: 30px;
+        }
+        @include breakpoint ($tablet, $desktop) {
+
+            margin-top: 70px;
+        }
+    }
+}

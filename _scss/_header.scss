@@ -1,0 +1,82 @@
+.header {
+
+    @include breakpoint ($mobile) {
+        flex-direction: column;
+        padding: 20px;
+    }
+    @include breakpoint ($tablet, $desktop) {
+        padding: 0px 50px;
+        align-items: center;
+        display: flex;
+        height: 100px;
+    }
+
+    background: $color-primary;
+    left: 0px;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+
+    .header__logo {
+        @include breakpoint ($mobile) {
+            @include span-columns(12);
+            text-align: center;
+        }
+        @include breakpoint ($tablet, $desktop) {
+            @include span-columns(4);
+        }
+        a img {
+            @include breakpoint ($mobile) {
+                height: 42px;
+            }
+            @include breakpoint ($tablet, $desktop) {
+                height: 56px;
+            }
+        }
+    }
+
+    .header__navigation {
+        @include breakpoint ($mobile) {
+            @include span-columns(12);
+            text-align: center;
+        }
+        @include breakpoint ($tablet, $desktop) {
+            @include span-columns(8);
+            text-align: right;
+        }
+
+        nav {
+            @include breakpoint ($mobile) {
+                margin-top: 20px;
+            }
+        }
+
+        nav li {
+            @include breakpoint ($mobile) {
+                margin-right: 20px;
+            }
+            @include breakpoint ($tablet, $desktop) {
+                margin-right: 30px;
+            }
+            display: inline-block;
+
+        }
+        nav li:last-child {
+            margin-right: 0px;
+        }
+        nav li a {
+            @include breakpoint ($mobile) {
+                font-size: 1.2em;
+            }
+            @include breakpoint ($tablet, $desktop) {
+                font-size: 1.4em;
+            }
+            color: $color-secondary;
+            font-weight: $font-weight-semibold;
+            text-transform: uppercase;
+        }
+        nav li a:hover {
+            border-bottom: 3px solid $color-highlight;
+        }
+    }
+}

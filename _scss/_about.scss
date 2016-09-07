@@ -1,0 +1,57 @@
+.about {
+
+    @include breakpoint ($mobile) {
+        padding: 50px 20px;
+    }
+    @include breakpoint ($tablet, $desktop) {
+        height: 100vh;
+        padding: 0px 50px;
+    }
+    align-items: center;
+    background: $color-secondary;
+    display: flex;
+    text-align: center;
+
+    div {
+        @include breakpoint ($mobile) {
+            @include span-columns(12);
+        }
+        @include breakpoint ($tablet) {
+            @include span-columns(10);
+            @include shift(1);
+        }
+        @include breakpoint ($desktop) {
+            @include span-columns(6);
+            @include shift(3);
+        }
+    }
+
+    img {
+        @include breakpoint ($mobile) {
+            height: 120px;
+            margin-bottom: 30px;
+        }
+        @include breakpoint ($tablet) {
+            height: 160px;
+            margin-bottom: 40px;
+        }
+        @include breakpoint ($desktop) {
+            height: 200px;
+            margin-bottom: 50px;
+        }
+        @include border-top-radius(200px);
+        @include border-bottom-radius(200px);
+    }
+
+    p {
+        @include breakpoint ($mobile) {
+            font-size: 1.4em;
+            line-height: 1.6em;
+        }
+        @include breakpoint ($tablet, $desktop) {
+            font-size: 1.6em;
+            line-height: 1.8em;
+        }
+        color: $color-primary;
+    }
+}

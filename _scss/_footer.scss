@@ -1,0 +1,96 @@
+.footer {
+
+    @include breakpoint ($mobile) {
+        @include row;
+        padding: 40px 20px;
+    }
+    @include breakpoint ($tablet, $desktop) {
+        align-items: center;
+        display: flex;
+        height: 145px;
+        padding: 0px 50px;
+    }
+    background: $color-primary;
+
+    .footer__name {
+        @include breakpoint ($mobile) {
+            @include span-columns(12);
+            margin-top: 0px;
+            text-align: center;
+        }
+        @include breakpoint ($tablet) {
+            @include span-columns(3);
+            text-align: left;
+        }
+        @include breakpoint ($desktop) {
+            @include span-columns(4);
+            text-align: left;
+        }
+        span {
+            @include breakpoint ($mobile) {
+                font-size: 1.6em;
+            }
+            @include breakpoint ($tablet, $desktop) {
+                font-size: 1.4em;
+            }
+            font-weight: $font-weight-semibold;
+            text-transform: uppercase;
+        }
+    }
+
+    .footer__copyright {
+        @include breakpoint ($mobile) {
+            @include span-columns(12);
+            margin-top: 30px;
+            text-align: center;
+        }
+        @include breakpoint ($tablet) {
+            @include span-columns(6);
+            text-align: center;
+        }
+        @include breakpoint ($desktop) {
+            @include span-columns(4);
+            text-align: center;
+        }
+        span {
+            @include breakpoint ($mobile) {
+                font-size: 0.8em;
+            }
+            @include breakpoint ($tablet) {
+                font-size: 1em;
+            }
+            @include breakpoint ($desktop) {
+                font-size: 1.4em;
+            }
+            font-weight: $font-weight-light;
+            text-transform: uppercase;
+        }
+    }
+
+    .footer__social {
+        @include breakpoint ($mobile) {
+            @include span-columns(12);
+            margin-top: 30px;
+            text-align: center;
+        }
+        @include breakpoint ($tablet) {
+            @include span-columns(3);
+            text-align: right;
+        }
+        @include breakpoint ($desktop) {
+            @include span-columns(4);
+            text-align: right;
+        }
+        a {
+            color: $color-secondary;
+            font-size: 1.4em;
+            margin-right: 15px;
+        }
+        a:last-child {
+            margin-right: 0px;
+        }
+        a:hover {
+            color: $color-highlight;
+        }
+    }
+}
